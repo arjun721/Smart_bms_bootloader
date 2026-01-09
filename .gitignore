@@ -1,0 +1,33 @@
+# Build and output folders
+/output/
+MDK/
+Listings/
+Objects/
+Debug/
+Docs/
+html/
+latex/
+
+# IDE metadata and settings
+.vscode/
+.settings/
+.metadata/
+
+# Python cache
+*.pyc
+
+# Keil project files (project & user config)
+*.uvoptx
+*.uvprojx
+
+# Keil GUI session files (user-specific)
+*.uvguix
+*.uvguix.*
+.uvguix
+/.uvguix
+
+# J-Link log file
+JLinkLog.txt
+output_generated/
+ouptput_generated
+ouptput_generated

@@ -1,0 +1,44 @@
+#ifndef _OZ3717_PROTECTION_H_
+#define _OZ3717_PROTECTION_H_
+ 
+#include "config.h"
+ 
+//Constant setting
+//UVSTDN 0x4F
+#define UVSTDN_DLY      OZ3717_UVSTDN_12CYCLE
+#define UVSTDN_TH       0       
+
+//OVP 0x50
+#define OVP_DLY        OZ3717_OVP_DLY_4CYCLE
+#define OVP_TH         AFE_OVER_VOLTAGE_TH_mV 
+#define OVP_RELEASE    AFE_OVER_VOLTAGE_REC_mV 
+
+//COCP 0x52
+#define TYPE_CFG        OZ3717_COCP_TYPE_CFG_2_TERMINAL
+#define COCP_DLY        OZ3717_COCP_DELAY_6_CYCLE
+#define COCP_TH         AFE_OVER_CHG_CURRENT_TH_mA 
+
+//DOC1P 0x51
+#define DOC1_TH         AFE_OVER_DSG_CURRENT_TH_mA  
+#define EFETC           OZ3717_DOC1P_EFETC_MODE_CHG_DSG_OFF_EFETC_HIGH
+#define DOC1P_DLY       OZ3717_DOC1P_DELAY_2_CYCLE
+
+//DOCSCP 0x53
+#define SCPTH          OZ3717_DOC2SC_SCP_TH_2X_DOC2
+#define INT_TYPE       OZ3717_DOC2SC_INTR_TYPE_100HZ
+#define DOC2P_DLY      32  //ms
+#define SCPP_DLY       300 //us
+#define DOC2P_TH       AFE_CURRENT_SC_TH_A  
+
+//IDLE 0x55
+#define DSG_TH   AFE_IDEL_CURRENT_DSG_TH_mA    
+#define CHG_TH   AFE_IDEL_CURRENT_CHG_TH_mA    
+
+//DOCSCP 0x55
+#define SPIWDT   OZ3717_SPIWDT_DISABLE
+
+
+ 
+
+#endif
+
