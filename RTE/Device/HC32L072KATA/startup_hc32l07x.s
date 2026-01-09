@@ -92,16 +92,12 @@ __Vectors
                 DCD     0                         ; Reserved
                 DCD     0                         ; Reserved
                 DCD     0                         ; Reserved
-;                DCD     SVC_Handler               ; SVCall
-;                DCD     0                         ; Reserved
-;                DCD     0                         ; Reserved
-;                DCD     PendSV_Handler            ; PendSV
-;                DCD     SysTick_Handler           ; SysTick
-                DCD     vPortSVCHandler
+                DCD     SVC_Handler               ; SVCall
                 DCD     0                         ; Reserved
-                DCD     0                         ; Reserved                  
-                DCD     xPortPendSVHandler
-                DCD     xPortSysTickHandler
+                DCD     0                         ; Reserved
+                DCD     PendSV_Handler            ; PendSV
+                DCD     SysTick_Handler           ; SysTick
+
                 DCD     PORTA_IRQHandler
                 DCD     PORTB_IRQHandler
                 DCD     PORTC_E_IRQHandler
@@ -150,9 +146,6 @@ Reset_Handler   PROC
                 EXPORT  Reset_Handler             [WEAK]
                 IMPORT  SystemInit
                 IMPORT  __main
-                IMPORT   vPortSVCHandler
-                IMPORT   xPortPendSVHandler
-                IMPORT   xPortSysTickHandler  
 
                ;reset NVIC if in rom debug
                 LDR     R0, =0x20000000

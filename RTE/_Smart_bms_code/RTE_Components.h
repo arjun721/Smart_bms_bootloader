@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'Smart_bms_App' 
- * Target:  'Smart_bms_app' 
+ * Target:  'Smart_bms_code' 
  */
 
 #ifndef RTE_COMPONENTS_H

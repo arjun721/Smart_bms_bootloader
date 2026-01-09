@@ -3,8 +3,8 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'Smart_bms_App' 
- * Target:  'Smart_bms_app' 
+ * Project: 'test' 
+ * Target:  'Target ' 
  */
 
 #ifndef RTE_COMPONENTS_H

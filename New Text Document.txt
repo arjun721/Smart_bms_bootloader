@@ -1,0 +1,25 @@
+#define DOC1_TH 5 //A
+#define OZ3717_DOC1P          					0x51	
+#define OZ3717_DOC1P_CELL_NUMBER_START        13	// Start at bit 13
+#define OZ3717_DOC1P_EFETC_MODE_DSG_OFF_EFETC_HIGH	    (0x00 << 11)	
+#define OZ3717_DOC1P_EFETC_MODE_CHG_DSG_OFF_EFETC_HIGH	(0x01 << 11)	
+#define OZ3717_DOC1P_EFETC_MODE_DSG_OFF_EFETC_LOW	    (0x02 << 11)	
+#define OZ3717_DOC1P_EFETC_MODE_CHG_DSG_OFF_EFETC_LOW	(0x03 << 11)	
+#define OZ3717_DOC1P_DELAY_2_CYCLE              (0x00 << 8)	// Start at bit 8
+#define OZ3717_DOC1P_DELAY_4_CYCLE              (0x01 << 8)	// Start at bit 8
+#define OZ3717_DOC1P_DELAY_6_CYCLE              (0x02 << 8)	// Start at bit 8
+#define OZ3717_DOC1P_DELAY_8_CYCLE              (0x03 << 8)	// Start at bit 8
+#define OZ3717_DOC1P_DELAY_10_CYCLE              (0x04 << 8)	// Start at bit 8
+#define OZ3717_DOC1P_DELAY_12_CYCLE              (0x05 << 8)	// Start at bit 8
+#define OZ3717_DOC1P_DELAY_14_CYCLE              (0x06 << 8)	// Start at bit 8
+#define OZ3717_DOC1P_DELAY_16_CYCLE              (0x07 << 8)	// Start at bit 8
+#define OZ3717_DOC1P_TH_LSB      					0.625
+#define OZ3717_DOC1P_TH_BASE     					(5-0.625)
+#define OZ3717_DOC1P_TH_DISABLE    					0
+
+//DOC1P 0x51
+#define DOC1P_TH_MV      ((RSENSE * DOC1_TH)-OZ3717_DOC1P_TH_BASE)
+#define CELL_NUMBER_REG  ((CELL_NUM-10) << OZ3717_DOC1P_CELL_NUMBER_START)
+#define DOC1P_TH_REG     (WORD)(DOC1P_TH_MV/OZ3717_DOC1P_TH_LSB)
+ #define	RSENSE									  (2.5) //mOhm  
+ #define 	CELL_NUM  			           17
