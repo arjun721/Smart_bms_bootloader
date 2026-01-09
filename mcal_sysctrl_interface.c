@@ -55,19 +55,6 @@ void
 SysTick_Handler(void)
 {
   App_IncTick();
-  
- static boolean_t bFlag = TRUE;
-    
-    if(TRUE == bFlag)
-    {
-      bFlag = FALSE;
-      App_BmsLedOn();  
-    }
-    else
-    {
-       bFlag = TRUE;
-       App_BmsLedOff();    
-    }
 }
 
 void 
